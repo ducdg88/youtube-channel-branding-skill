@@ -26,3 +26,14 @@ jobs:
           python skills/universal-youtube-branding/scripts/init_project.py --brief skills/universal-youtube-branding/templates/brief.json --out /tmp/demo
           python skills/universal-youtube-branding/scripts/build_prompts.py --brand skills/universal-youtube-branding/examples/luxury_woodworking/brand.lock.json --out /tmp/demo/prompts.md
           python skills/universal-youtube-branding/scripts/niche_router.py --niche "Space Documentary"
+      - name: README path for a new channel (init, fill lock, prompts)
+        run: |
+          python skills/universal-youtube-branding/scripts/init_project.py --brief skills/universal-youtube-branding/templates/brief.json --out /tmp/new
+          python - <<'PY'
+          import json
+          p = '/tmp/new/brand.lock.json'
+          b = json.load(open(p, encoding='utf-8'))
+          b.update(brand_name='Test Channel', descriptor='TEST', tagline='HELLO', palette={'background': '#000000'}, lock_status='LOCKED')
+          json.dump(b, open(p, 'w', encoding='utf-8'))
+          PY
+          python skills/universal-youtube-branding/scripts/build_prompts.py --brand /tmp/new/brand.lock.json --out /tmp/new/prompts.md

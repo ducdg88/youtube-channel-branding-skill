@@ -25,7 +25,7 @@ def main():
  if not args.allow_draft and lock not in ('LOCKED','DEMO_LOCKED'):
   ap.error('brand.lock.json must have lock_status=LOCKED; use --allow-draft only for preliminary prompts')
  spec=json.loads((ROOT/'templates'/('asset_spec_reference6.json' if args.profile=='reference6' else 'asset_spec.json')).read_text(encoding='utf-8'))
- if b.get('asset_profile') and b['asset_profile'].upper()!=args.profile.upper().replace('REFERENCE6','REFERENCE_6').replace('LEGACY5','LEGACY_5'):
+ if b.get('asset_profile') and b['asset_profile'].upper().replace('_','')!=args.profile.upper().replace('_',''):
   ap.error('Profile does not match asset_profile in brand.lock.json')
  title=b['brand_name']; tagline=b.get('tagline',''); descriptor=b.get('descriptor','')
  style=b.get('style','AUTO'); niche=b.get('niche',''); motif=b.get('logo_motif','');palette=b.get('palette',{})

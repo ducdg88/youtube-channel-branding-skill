@@ -28,7 +28,7 @@ def main():
   'niche':brief.get('niche',''),
   'market':brief.get('market','Global'),
   'style':brief.get('style','AUTO'),
-  'asset_profile':profile.upper(),
+  'asset_profile':{'reference6':'REFERENCE_6','legacy5':'LEGACY_5'}.get(profile,profile.upper()),
   'asset_spec_version':spec['version'],
   'lock_status':'NOT_LOCKED',
   'palette':{},'logo_motif':'', 'descriptor':'', 'tagline':'',
