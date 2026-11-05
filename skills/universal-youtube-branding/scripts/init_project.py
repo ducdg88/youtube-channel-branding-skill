@@ -20,7 +20,7 @@ def main():
   (output/item['filename']).parent.mkdir(parents=True,exist_ok=True)
  (output/'prompts').mkdir(exist_ok=True)
  (output/'reports').mkdir(exist_ok=True)
- brief['asset_profile']=profile.upper()
+ brief['asset_profile']={'reference6':'REFERENCE_6','legacy5':'LEGACY_5'}.get(profile,profile.upper())
  brief['required_assets']=len(spec['required_assets'])
  (output/'brief.json').write_text(json.dumps(brief,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
  lock={
