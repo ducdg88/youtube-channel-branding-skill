@@ -21,6 +21,8 @@ Mặc định (`ASSET_PROFILE=REFERENCE_6`) skill làm **6 ảnh độc lập**,
 | 05 | `05_WORDMARK_TRANSPARENT_2048x682.png` | 2048×682 | Logo chữ, PNG nền trong suốt thật |
 | 06 | `06_BATTLE_SCENE_B_ALTERNATE_2048x1152.png` | 2048×1152 | Cảnh kể chuyện B, bố cục khác A |
 
+Tên file `BATTLE_SCENE` giữ từ bản gốc để tương thích; dùng cho cảnh kể chuyện của mọi ngách, không riêng game.
+
 Kèm ảnh bìa tải lên YouTube **2560×1440, dưới 6 MB**, mọi chữ và logo nằm trong vùng an toàn giữa (x 508 đến 2052, y 509 đến 932) theo [hướng dẫn của YouTube](https://support.google.com/youtube/answer/10456525). Muốn đúng 5 ảnh kiểu cũ thì ghi `ASSET_PROFILE=LEGACY_5`.
 
 Ngoài ảnh, chế độ đầy đủ còn ra: `name_research.md` (20 đến 30 tên, sàng lọc trùng), `brand.lock.json` (khoá tên, màu, font, motif), `brand_guide.md`, `seo_keywords.csv`, `content_ideas.md`, `prompts_final.md`, `manifest.json`, `qa_report.json`, `README_upload.md`.
@@ -79,7 +81,10 @@ Kiểm ảnh bằng script (cần Pillow):
 ```bash
 python skills/universal-youtube-branding/scripts/validate_assets.py <thư mục dự án> --profile reference6 --report qa_report.json
 python skills/universal-youtube-branding/scripts/init_project.py --brief skills/universal-youtube-branding/templates/brief.json --out ./kenh-moi
+# điền brand_name, descriptor, tagline, palette vào ./kenh-moi/brand.lock.json và đặt "lock_status": "LOCKED" trước bước dưới
 python skills/universal-youtube-branding/scripts/build_prompts.py --brand ./kenh-moi/brand.lock.json --out ./kenh-moi/prompts.md
+# chạy thử ngay trên ví dụ có sẵn:
+python skills/universal-youtube-branding/scripts/build_prompts.py --brand skills/universal-youtube-branding/examples/luxury_woodworking/brand.lock.json --out ./kenh-moi/demo-prompts.md
 python skills/universal-youtube-branding/scripts/niche_router.py --niche "Space Documentary"
 ```
 

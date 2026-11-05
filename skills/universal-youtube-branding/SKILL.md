@@ -17,10 +17,10 @@ description: >-
 
 ## 0A. QUY TẮC ƯU TIÊN SỐ LƯỢNG: FIX THIẾU ẢNH / FORMAT LOCK v1.3
 
-**Quan trọng:** Người dùng đã gửi **6 ảnh tham chiếu**. Với dự án tiếp theo, mặc định `ASSET_PROFILE=REFERENCE_6`, sản xuất **6 FILE ẢNH ĐỘC LẬP**, không dừng ở 5. Chỉ chuyển `LEGACY_5` nếu người dùng ghi rõ muốn đúng 5. Nếu người dùng gửi số lượng mới, ưu tiên đếm ảnh thực tế và xác nhận bằng manifest trước khi tạo.
+**Quan trọng:** Chuẩn mặc định là **6 ảnh** theo bộ ảnh tham chiếu. Với mọi dự án, mặc định `ASSET_PROFILE=REFERENCE_6`, sản xuất **6 FILE ẢNH ĐỘC LẬP**, không dừng ở 5. Chỉ chuyển `LEGACY_5` nếu người dùng ghi rõ muốn đúng 5. Nếu người dùng gửi số lượng mới, ưu tiên đếm ảnh thực tế và xác nhận bằng manifest trước khi tạo.
 
 1. 01 BANNER CINEMATIC 2048×682, 3:1, chủ đề điện ảnh chính.
-2. 02 STORY SCENE A 1672×941, 16:9, bố cục kể chuyện/đấu đội phong cách 2.
+2. 02 STORY SCENE A 1672×941, 16:9, bố cục kể chuyện phong cách 2.
 3. 03 LOGO + BRAND NAME HORIZONTAL 2048×682, PNG RGBA trong suốt thật.
 4. 04 AVATAR BADGE 1254×1254, logo tròn và đọc được khi thu nhỏ.
 5. 05 TEXT WORDMARK HORIZONTAL 2048×682, PNG RGBA trong suốt thật.
@@ -34,10 +34,10 @@ QA bắt buộc cho mode mới:
 
 ## 0B. KHÓA PHẠM VI VIDEO DÀI / ĐA THỊ TRƯỜNG (FIX v1.3)
 
-- Nếu người dùng ghi `video dài`, `long-form`, `full gameplay` ⇒ đưa vào `brand.lock.json` (`content_format=LONG_FORM`), áp dụng cho SEO, slogan và 6 ảnh; **không** tự chuyển sang Shorts, meme, reaction, TikTok.
-- Nếu người dùng ghi `thay cho Shorts meme cũ`, bỏ mọi tag `Shorts`, `meme`, `short-form` từ brief mới của kênh đó, không chuyển sang kênh khác.
-- `BOSS_FIGHT`: **một squad đấu MỘT boss nổi bật**, không tái sử dụng bố cục hai đội đồng đều từ `TEAM_BATTLE`. Gợi ý thứ bậc kích thước: boss 1.5 đến 3× nhân vật phe mình, một VS/tâm nổ, một trận chiến dài.
-- `ES_GAMEPLAY`: tên gốc có dấu (ví dụ `Jardín Mágico`) phải giữ đúng dấu Unicode. Tất cả tagline, tiêu đề video, keywords, mô tả và chữ phụ dùng **tiếng Tây Ban Nha**, không bỏ dấu thành `Jardin Magico`, không giữ chữ của bản EN.
+- Nếu người dùng ghi `video dài`, `long-form` ⇒ đưa vào `brand.lock.json` (`content_format=LONG_FORM`), áp dụng cho SEO, slogan và 6 ảnh; **không** tự chuyển sang Shorts, meme, reaction, TikTok.
+- Nếu người dùng muốn kênh mới thay cho định dạng Shorts hay meme, bỏ mọi tag `Shorts`, `meme`, `short-form` khỏi brief của kênh đó.
+- Ví dụ thể loại `BOSS_FIGHT` (kênh game đấu boss): **một squad đấu MỘT boss nổi bật**, không tái sử dụng bố cục hai đội đồng đều từ `TEAM_BATTLE`. Gợi ý thứ bậc kích thước: boss 1.5 đến 3× nhân vật phe mình, một VS/tâm nổ, một trận chiến dài.
+- Ví dụ thể loại kênh ngôn ngữ khác (`locale=es`): tên gốc có dấu (ví dụ `Jardín Mágico`) phải giữ đúng dấu Unicode. Tất cả tagline, tiêu đề video, keywords, mô tả và chữ phụ dùng **tiếng Tây Ban Nha**, không bỏ dấu thành `Jardin Magico`, không giữ chữ của bản EN.
 - `BATCH`: khi nhiều kênh trong cùng yêu cầu, tạo **brand.lock, output, QA, preview và ZIP riêng cho TỪNG kênh**; không tái sử dụng hình đầu ra hoặc đặt sai tên kênh; giữ cùng format 6 ảnh nhưng creative direction riêng.
 - Tuyệt đối không đặt logo/game badge kiểu giả mạo cơ quan phát hành. Kênh fan phải ghi rõ không chính thức ở phần mô tả khi thích hợp.
 - Không được tuyên bố `name/handle unique` nếu chưa xác nhận trong YouTube Studio; không suy diễn từ search engine.
@@ -98,7 +98,7 @@ Ví dụ: Wildlife = màu căng thẳng/động vật; Luxury Woodworking = waln
 
 ## 4. QA: không được bỏ qua
 
-Chạy `python scripts/validate_assets.py <path-to-assets> --report <path-to-qa.json>`; yêu cầu Pillow. Kiểm tra đủ file, size, alpha, 2 YouTube JPG ≤6MB, file không hỏng, JSON manifest và các vùng text kiểm tra được từ dữ liệu layout. QA kỹ thuật **không chứng minh** chữ trong hình đúng hay logo đẹp: phải kiểm tra bằng mắt ở 2560 wide, mobile-safe crop, avatar 98px, transparent on light/dark. Nếu lỗi text/shape/alpha, sửa rồi kiểm lại; QA report không được ghi PASS khi thực tế chưa kiểm tra bằng mắt.
+Chạy `python scripts/validate_assets.py <project-root> --profile reference6 --report <path-to-qa.json>` (bản 5 ảnh: `--profile legacy5`); yêu cầu Pillow. Kiểm tra đủ file, size, alpha, ảnh bìa YouTube JPG ≤6MB (reference6 có 1 file, legacy5 có 2), file không hỏng, JSON manifest và các vùng text kiểm tra được từ dữ liệu layout. QA kỹ thuật **không chứng minh** chữ trong hình đúng hay logo đẹp: phải kiểm tra bằng mắt ở 2560 wide, mobile-safe crop, avatar 98px, transparent on light/dark. Nếu lỗi text/shape/alpha, sửa rồi kiểm lại; QA report không được ghi PASS khi thực tế chưa kiểm tra bằng mắt.
 
 ## 5. Pipeline & đa agent
 

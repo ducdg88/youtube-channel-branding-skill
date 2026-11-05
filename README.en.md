@@ -21,6 +21,8 @@ By default (`ASSET_PROFILE=REFERENCE_6`) the skill creates **six standalone imag
 | 05 | `05_WORDMARK_TRANSPARENT_2048x682.png` | 2048×682 | Text wordmark, real transparent PNG |
 | 06 | `06_BATTLE_SCENE_B_ALTERNATE_2048x1152.png` | 2048×1152 | Story scene B, different layout from A |
 
+The `BATTLE_SCENE` file names are kept from the original for compatibility; they hold story scenes for any niche, not only games.
+
 Plus a YouTube upload banner **2560×1440 under 6 MB** with every word and logo inside the central safe area (x 508 to 2052, y 509 to 932), following [YouTube's guidance](https://support.google.com/youtube/answer/10456525). Use `ASSET_PROFILE=LEGACY_5` for the older five-image set.
 
 Full mode also writes `name_research.md` (20 to 30 screened names), `brand.lock.json` (locked name, palette, fonts, motif), `brand_guide.md`, `seo_keywords.csv`, `content_ideas.md`, `prompts_final.md`, `manifest.json`, `qa_report.json` and `README_upload.md`.
@@ -79,7 +81,10 @@ QA and helper scripts (need Pillow):
 ```bash
 python skills/universal-youtube-branding/scripts/validate_assets.py <project> --profile reference6 --report qa_report.json
 python skills/universal-youtube-branding/scripts/init_project.py --brief skills/universal-youtube-branding/templates/brief.json --out ./new-channel
+# fill brand_name, descriptor, tagline, palette in ./new-channel/brand.lock.json and set "lock_status": "LOCKED" before the next step
 python skills/universal-youtube-branding/scripts/build_prompts.py --brand ./new-channel/brand.lock.json --out ./new-channel/prompts.md
+# try it now on the bundled example:
+python skills/universal-youtube-branding/scripts/build_prompts.py --brand skills/universal-youtube-branding/examples/luxury_woodworking/brand.lock.json --out ./new-channel/demo-prompts.md
 python skills/universal-youtube-branding/scripts/niche_router.py --niche "Space Documentary"
 ```
 

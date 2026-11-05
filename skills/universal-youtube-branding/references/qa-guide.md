@@ -8,12 +8,12 @@ Thêm 01 banner YouTube 2560×1440 JPG ≤6 MiB, toàn bộ nội dung trọng y
 
 Run `python scripts/validate_assets.py <project_root> --profile reference6 --report <qa_report.json>`.
 
-Technical PASS chỉ xác nhận định dạng, đúng count/kích cỡ/alpha/tệp, **không** đảm bảo logo đẹp hoặc chữ đúng. Bắt buộc duyệt bằng mắt: chính tả và dấu tiếng Tây Ban Nha, số lượng boss, khác nhau giữa scene A/B, tên và bảng màu đồng bộ, không còn tên thương hiệu cũ, phần chữ nằm trong vùng an toàn, biểu tượng avatar đọc được khi thu nhỏ, không giả làm kênh chính thức của nhà phát hành game hay thương hiệu khác.
+Technical PASS chỉ xác nhận định dạng, đúng count/kích cỡ/alpha/tệp, **không** đảm bảo logo đẹp hoặc chữ đúng. Bắt buộc duyệt bằng mắt: chính tả và dấu của ngôn ngữ kênh, khác nhau giữa scene A/B, tên và bảng màu đồng bộ, không còn tên thương hiệu cũ, phần chữ nằm trong vùng an toàn, biểu tượng avatar đọc được khi thu nhỏ, không giả làm kênh chính thức của nhà phát hành game hay thương hiệu khác.
 
 ## LEGACY_5
 Chỉ kích hoạt nếu user **nói rõ 5 ảnh**. Không được hạ từ 6 xuống 5 do ảnh 02/06 có cùng tỷ lệ 16:9.
 
-## Mẫu task chuyên biệt
+## Ví dụ thể loại (chỉ áp khi kênh đúng thể loại đó)
 **Kênh đấu boss:** video DÀI; đội phe mình vs MỘT boss ở vị trí nổi bật; có thể có nhân vật nền nhưng không thành 2 đội ngang nhau, không Shorts/meme.
 **Kênh gameplay tiếng Tây Ban Nha:** video DÀI; tên trên logo giữ đúng dấu (ví dụ `Jardín Mágico`), SEO, mô tả, tiêu đề bằng tiếng Tây Ban Nha; tránh chữ tiếng Anh trên logo hay tagline, không gộp với kênh khác.
 
