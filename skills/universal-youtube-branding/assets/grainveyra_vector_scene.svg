@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="1152" viewBox="0 0 2048 1152">
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#150D0A"/><stop offset=".49" stop-color="#4A2516"/><stop offset="1" stop-color="#AC642C"/></linearGradient>
+<radialGradient id="sun"><stop stop-color="#F7DB9D"/><stop offset=".64" stop-color="#CD8D49"/><stop offset="1" stop-color="#8C4A24"/></radialGradient>
+<linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#381B11"/><stop offset="1" stop-color="#0D0908"/></linearGradient>
+<pattern id="grain" width="130" height="45" patternUnits="userSpaceOnUse"><path d="M-30 34 Q35 5 132 29" stroke="#C4864C" stroke-opacity=".19" stroke-width="3" fill="none"/><path d="M0 12 Q42 -5 136 8" stroke="#F4CB88" stroke-opacity=".09" stroke-width="2" fill="none"/></pattern>
+</defs>
+<rect width="2048" height="1152" fill="url(#sky)"/>
+<circle cx="1074" cy="417" r="337" fill="url(#sun)" opacity=".94"/>
+<g stroke="#F0B972" stroke-opacity=".26" fill="none" stroke-width="4"><path d="M0 80 C320 104 445 13 780 75 S1370 120 2048 20"/><path d="M0 139 C310 160 440 86 785 138 S1400 194 2048 90"/><path d="M0 202 C310 223 440 163 785 216 S1400 250 2048 168"/></g>
+<path d="M0 647 Q155 537 310 616 Q470 486 618 633 Q760 548 930 665 Q1113 557 1299 650 Q1563 509 1766 630 Q1931 568 2048 612 L2048 1152 L0 1152Z" fill="#2D1711"/>
+<path d="M0 789 Q312 700 620 764 Q984 684 1326 786 Q1670 679 2048 761 L2048 1152 L0 1152Z" fill="url(#ground)"/>
+<!-- Left giant cross section log engraved rings -->
+<g transform="translate(176 648)"><ellipse rx="232" ry="258" fill="#402316" stroke="#E9AB61" stroke-width="14"/><ellipse rx="200" ry="222" fill="none" stroke="#9B6036" stroke-width="19"/><ellipse rx="170" ry="186" fill="none" stroke="#E0AD72" stroke-width="10"/><ellipse rx="139" ry="156" fill="none" stroke="#8D5935" stroke-width="12"/><ellipse rx="104" ry="120" fill="none" stroke="#E0B377" stroke-width="6"/><ellipse rx="62" ry="76" fill="none" stroke="#B57D46" stroke-width="10"/><path d="M0 0 L126 -176 M0 0 L-154 114 M0 0 L-90 -176" stroke="#1A100C" stroke-width="7"/></g>
+<!-- woodworkers and machines silhouettes -->
+<g fill="#100D0A" stroke="#110C0A" stroke-width="6"><path d="M423 845 L894 845 L910 906 L440 906Z"/><path d="M479 906 L466 1086 L502 1086 L549 910 M847 910 L894 1086 L926 1086 L904 907"/><path d="M417 838 Q558 775 679 804 Q820 766 892 833 Q780 861 630 850 Q519 860 417 838Z" fill="#4E2C1A" stroke="#BF844B" stroke-width="12"/>
+<path d="M1597 895 L2002 895 L1982 1034 L1607 1034Z"/><path d="M1686 1036 L1685 1152 M1904 1036 L1905 1152" stroke="#110C0A" stroke-width="36"/>
+<path d="M1758 538 L1856 538 L1856 905 L1758 905Z"/><path d="M1636 512 L2032 512 L2032 566 L1636 566Z"/><rect x="1880" y="567" width="93" height="84" rx="8"/><path d="M1925 652 L1925 811" stroke="#CF8D40" stroke-width="12"/><circle cx="1925" cy="841" r="24" fill="#E8A65A" stroke="none"/></g>
+<!-- cinematic apron master craftsman silhouette right foreground -->
+<g fill="#1B100C"><circle cx="1454" cy="782" r="35"/><path d="M1423 811 L1504 811 L1516 944 L1410 944Z"/><path d="M1428 928 L1407 1074 L1439 1074 L1464 945 M1496 928 L1518 1074 L1550 1074 L1509 927"/><path d="M1425 830 L1360 887 L1374 911 L1456 862 M1498 827 L1583 869 L1577 899 L1481 867"/></g>
+<rect x="0" y="973" width="2048" height="179" fill="#130C09"/>
+<rect x="0" y="978" width="2048" height="15" fill="#BA824D" opacity=".55"/>
+<rect x="0" y="0" width="2048" height="1152" fill="url(#grain)"/>
+</svg>

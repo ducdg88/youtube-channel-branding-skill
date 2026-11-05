@@ -1,0 +1,90 @@
+{
+  "version": "1.3",
+  "profile": "reference6",
+  "reference_based": true,
+  "required_assets": [
+    {
+      "id": "01",
+      "filename": "01_SIX_MAIN_ASSETS/01_BANNER_CINEMATIC_2048x682.png",
+      "width": 2048,
+      "height": 682,
+      "format": "PNG",
+      "alpha_required": false,
+      "role": "hero_banner_panorama"
+    },
+    {
+      "id": "02",
+      "filename": "01_SIX_MAIN_ASSETS/02_BATTLE_SCENE_A_1672x941.png",
+      "width": 1672,
+      "height": 941,
+      "format": "PNG",
+      "alpha_required": false,
+      "role": "story_scene_a"
+    },
+    {
+      "id": "03",
+      "filename": "01_SIX_MAIN_ASSETS/03_LOGO_PLUS_NAME_TRANSPARENT_2048x682.png",
+      "width": 2048,
+      "height": 682,
+      "format": "PNG",
+      "alpha_required": true,
+      "minimum_fully_transparent_fraction": 0.02,
+      "minimum_content_fraction": 0.03,
+      "role": "emblem_plus_name_horizontal"
+    },
+    {
+      "id": "04",
+      "filename": "01_SIX_MAIN_ASSETS/04_AVATAR_ROUND_1254x1254.png",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "alpha_required": false,
+      "alpha_optional": true,
+      "background_guidance": "Opaque white/brand background OR transparent; original supplied avatar has opaque white background.",
+      "role": "circular_avatar"
+    },
+    {
+      "id": "05",
+      "filename": "01_SIX_MAIN_ASSETS/05_WORDMARK_TRANSPARENT_2048x682.png",
+      "width": 2048,
+      "height": 682,
+      "format": "PNG",
+      "alpha_required": true,
+      "minimum_fully_transparent_fraction": 0.02,
+      "minimum_content_fraction": 0.03,
+      "role": "wordmark_only_horizontal"
+    },
+    {
+      "id": "06",
+      "filename": "01_SIX_MAIN_ASSETS/06_BATTLE_SCENE_B_ALTERNATE_2048x1152.png",
+      "width": 2048,
+      "height": 1152,
+      "format": "PNG",
+      "alpha_required": false,
+      "role": "story_scene_b_alternate"
+    }
+  ],
+  "upload_assets": [
+    {
+      "filename": "02_YOUTUBE_READY/YOUTUBE_CHANNEL_ART_SAFE_2560x1440.jpg",
+      "width": 2560,
+      "height": 1440,
+      "format": "JPEG",
+      "max_bytes": 6291456
+    }
+  ],
+  "safe_area_youtube_px": {
+    "canvas": [
+      2560,
+      1440
+    ],
+    "bbox_center": [
+      508,
+      509,
+      2052,
+      932
+    ]
+  },
+  "exact_required_main_count": 6,
+  "reference_scope": "Dimensions, count, distinct roles and canvas types only; subject/style/color are niche-adaptive."
+}

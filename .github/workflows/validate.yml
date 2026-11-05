@@ -1,0 +1,28 @@
+name: validate
+on:
+  push:
+  pull_request:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow
+      - name: Compile scripts
+        run: python -m compileall -q skills/universal-youtube-branding/scripts
+      - name: SKILL.md has name and description
+        run: |
+          head -12 skills/universal-youtube-branding/SKILL.md | grep -q '^name: universal-youtube-branding'
+          head -12 skills/universal-youtube-branding/SKILL.md | grep -q '^description:'
+      - name: JSON templates parse
+        run: for f in skills/universal-youtube-branding/templates/*.json skills/universal-youtube-branding/examples/*/*.json; do python -m json.tool "$f" > /dev/null; done
+      - name: QA the GRAINVEYRA example
+        run: python skills/universal-youtube-branding/scripts/validate_assets.py skills/universal-youtube-branding/examples/luxury_woodworking/assets --profile legacy5
+      - name: Scaffold and prompt pack
+        run: |
+          python skills/universal-youtube-branding/scripts/init_project.py --brief skills/universal-youtube-branding/templates/brief.json --out /tmp/demo
+          python skills/universal-youtube-branding/scripts/build_prompts.py --brand skills/universal-youtube-branding/examples/luxury_woodworking/brand.lock.json --out /tmp/demo/prompts.md
+          python skills/universal-youtube-branding/scripts/niche_router.py --niche "Space Documentary"

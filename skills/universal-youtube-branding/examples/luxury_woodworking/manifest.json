@@ -1,0 +1,106 @@
+{
+  "project": "grainveyra-luxury-woodworking",
+  "skill_name": "universal-youtube-branding",
+  "mode": "FULL",
+  "style": "AUTO",
+  "created": "2026-11-06",
+  "brand_name": "GRAINVEYRA",
+  "assets": [
+    {
+      "name": "01_banner_cinematic_2048x682.png",
+      "size": [
+        2048,
+        682
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "bytes": 2286627,
+      "sha256": "1fdc942582240945cf79deb9c751f2efe4b656540d33175aee5836f12d22f0d3"
+    },
+    {
+      "name": "02_banner_story_vector_2048x1152.png",
+      "size": [
+        2048,
+        1152
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "bytes": 478777,
+      "sha256": "8a0a8c54a97d5876ab72cc92a0ed9037361f63fc93f2d196e1c2dff0e10faf71"
+    },
+    {
+      "name": "03_logo_horizontal_transparent_2048x682.png",
+      "size": [
+        2048,
+        682
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "bytes": 364688,
+      "sha256": "6b4479a542b74dfc1d211535af656c81c041ff1ee7f145f9d74a13c29d569c89"
+    },
+    {
+      "name": "04_avatar_1254x1254.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "bytes": 450563,
+      "sha256": "1e47f054e7ffceb89724141ef12b865e01818204ab9a3d82571fef0265fda172"
+    },
+    {
+      "name": "05_wordmark_transparent_2048x682.png",
+      "size": [
+        2048,
+        682
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "bytes": 109822,
+      "sha256": "8813f8b87302e3b20e1c39880d2a5eeeeb32ce85182c05f5d72b611c184137ff"
+    },
+    {
+      "name": "YOUTUBE_UPLOAD_01_cinematic_2560x1440.jpg",
+      "size": [
+        2560,
+        1440
+      ],
+      "mode": "RGB",
+      "format": "JPEG",
+      "bytes": 524636,
+      "sha256": "1ef6ffdc6f1b5ca0d294e8b6c54cbdb795fb4dbc0f322459084103efc5d3a1d2"
+    },
+    {
+      "name": "YOUTUBE_UPLOAD_02_vector_2560x1440.jpg",
+      "size": [
+        2560,
+        1440
+      ],
+      "mode": "RGB",
+      "format": "JPEG",
+      "bytes": 413279,
+      "sha256": "c7aa62becb8601ec529248bc06ee4cf5fdacf041236ce8225beff040d22c061d"
+    },
+    {
+      "name": "02_banner_story_exact_reference_1672x941.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "bytes": 721618,
+      "sha256": "f07aa7441893d80ec369e622b7ea59e3dba2b8ee237ad45851c0fe1f8bd49ffe"
+    }
+  ],
+  "meta": {
+    "name_verified": false,
+    "handle_verified": false,
+    "seo_volume_verified": false,
+    "five_demo_images_generated": true,
+    "two_youtube_compatible_export_files_generated": true,
+    "human_visual_review": "Creative preview performed; independent user approval pending"
+  }
+}

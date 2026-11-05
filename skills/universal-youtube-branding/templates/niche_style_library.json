@@ -1,0 +1,301 @@
+{
+  "luxury_woodworking": {
+    "keywords": [
+      "luxury woodworking",
+      "woodworking",
+      "wood slab",
+      "live edge",
+      "timber",
+      "furniture"
+    ],
+    "name": "Luxury Woodworking",
+    "emotional_tone": "premium, artisanal, precise",
+    "palette": {
+      "background": "#0F0C0A",
+      "surface": "#24160F",
+      "accent": "#BD7B3F",
+      "highlight": "#E5B86C",
+      "text": "#F4EBD9"
+    },
+    "motif": "wood growth rings / live-edge grain",
+    "scene": "luxury furniture workshop with live-edge giant wood slabs and CNC precision"
+  },
+  "wildlife": {
+    "keywords": [
+      "wildlife",
+      "animals",
+      "predator",
+      "safari",
+      "nature"
+    ],
+    "name": "Wildlife Documentary",
+    "emotional_tone": "dramatic, observational",
+    "palette": {
+      "background": "#111514",
+      "surface": "#2A2519",
+      "accent": "#B76A30",
+      "highlight": "#F2BE6C",
+      "text": "#F8F6EB"
+    },
+    "motif": "animal track / organic ecology contour",
+    "scene": "cinematic ecosystems and wildlife without gore"
+  },
+  "ai_technology": {
+    "keywords": [
+      "ai",
+      "artificial intelligence",
+      "technology",
+      "robot",
+      "software"
+    ],
+    "name": "AI & Technology",
+    "emotional_tone": "intelligent, forward-looking",
+    "palette": {
+      "background": "#08101E",
+      "surface": "#142743",
+      "accent": "#00BFEA",
+      "highlight": "#B8A3FF",
+      "text": "#E7F5FF"
+    },
+    "motif": "neural geometry",
+    "scene": "dark technology lab and abstract luminous circuits"
+  },
+  "space": {
+    "keywords": [
+      "space",
+      "universe",
+      "astronomy",
+      "cosmos",
+      "galaxy"
+    ],
+    "name": "Space & Cosmos",
+    "emotional_tone": "wondrous, expansive",
+    "palette": {
+      "background": "#070B21",
+      "surface": "#1B1741",
+      "accent": "#886FF5",
+      "highlight": "#D1C0F9",
+      "text": "#F2F0FF"
+    },
+    "motif": "orbit / astral halo",
+    "scene": "nebulae galaxies orbital contours"
+  },
+  "heavy_machinery": {
+    "keywords": [
+      "machine",
+      "excavator",
+      "construction",
+      "truck",
+      "mining",
+      "industrial"
+    ],
+    "name": "Heavy Machinery",
+    "emotional_tone": "powerful, technical",
+    "palette": {
+      "background": "#111417",
+      "surface": "#232B32",
+      "accent": "#F7B319",
+      "highlight": "#B0B9C1",
+      "text": "#FFFFFF"
+    },
+    "motif": "industrial monoline gear",
+    "scene": "massive industrial machinery workshop or extraction site"
+  },
+  "history": {
+    "keywords": [
+      "history",
+      "ancient",
+      "civilization",
+      "empire",
+      "mystery",
+      "archaeology"
+    ],
+    "name": "History & Mystery",
+    "emotional_tone": "scholarly, cinematic",
+    "palette": {
+      "background": "#1A1813",
+      "surface": "#3B3125",
+      "accent": "#B59154",
+      "highlight": "#E0D1AB",
+      "text": "#F3E9CF"
+    },
+    "motif": "engraved arc / archival seal",
+    "scene": "ancient architecture archival maps and aged parchment"
+  },
+  "cooking": {
+    "keywords": [
+      "cooking",
+      "food",
+      "recipe",
+      "baking",
+      "chef"
+    ],
+    "name": "Cooking & Food",
+    "emotional_tone": "approachable, appetizing",
+    "palette": {
+      "background": "#211812",
+      "surface": "#5B3221",
+      "accent": "#D9873D",
+      "highlight": "#EACB8B",
+      "text": "#FFF8E9"
+    },
+    "motif": "handcrafted circular plate",
+    "scene": "freshly prepared culinary scene with natural light"
+  },
+  "ocean": {
+    "keywords": [
+      "ocean",
+      "sea",
+      "marine",
+      "underwater"
+    ],
+    "name": "Ocean & Marine",
+    "emotional_tone": "immersive, serene",
+    "palette": {
+      "background": "#061C2A",
+      "surface": "#123F50",
+      "accent": "#00A7B9",
+      "highlight": "#A0E7E7",
+      "text": "#ECF9FA"
+    },
+    "motif": "tidal current",
+    "scene": "deep ocean currents and marine ecosystem"
+  },
+  "farming": {
+    "keywords": [
+      "farm",
+      "agriculture",
+      "harvest",
+      "crops"
+    ],
+    "name": "Farming",
+    "emotional_tone": "organic, purposeful",
+    "palette": {
+      "background": "#18221A",
+      "surface": "#2C4830",
+      "accent": "#A8BE64",
+      "highlight": "#EBE1AA",
+      "text": "#FCFAEB"
+    },
+    "motif": "leaf furrow / crop rows",
+    "scene": "agricultural landscape with harvest equipment"
+  },
+  "automotive": {
+    "keywords": [
+      "car",
+      "automotive",
+      "vehicle",
+      "engine",
+      "supercar"
+    ],
+    "name": "Automotive",
+    "emotional_tone": "dynamic, engineered",
+    "palette": {
+      "background": "#0A1015",
+      "surface": "#202D36",
+      "accent": "#EF624B",
+      "highlight": "#B5C8D9",
+      "text": "#FFFFFF"
+    },
+    "motif": "aerodynamic speedline",
+    "scene": "high-performance automotive design studio"
+  },
+  "finance": {
+    "keywords": [
+      "finance",
+      "money",
+      "investing",
+      "business",
+      "stock"
+    ],
+    "name": "Finance",
+    "emotional_tone": "credible, orderly",
+    "palette": {
+      "background": "#0B1825",
+      "surface": "#182B3C",
+      "accent": "#3AA6A3",
+      "highlight": "#C7D9C0",
+      "text": "#FFFFFF"
+    },
+    "motif": "clean upward geometry",
+    "scene": "modern minimal business analytical environment"
+  },
+  "education": {
+    "keywords": [
+      "education",
+      "learning",
+      "science",
+      "tutorial",
+      "math"
+    ],
+    "name": "Education",
+    "emotional_tone": "clear, curious",
+    "palette": {
+      "background": "#132438",
+      "surface": "#234765",
+      "accent": "#F9A35E",
+      "highlight": "#9DD4D9",
+      "text": "#FAFDFF"
+    },
+    "motif": "interlocking ideas",
+    "scene": "bright learning studio with clean diagrams"
+  },
+  "game_team_battle": {
+    "name": "Game team battles",
+    "keywords": [
+      "team battle",
+      "two squads",
+      "squad showdown",
+      "versus gameplay"
+    ],
+    "emotional_tone": "energetic, balanced, competitive",
+    "palette": {
+      "background": "#09152B",
+      "surface": "#281953",
+      "accent": "#64E83C",
+      "highlight": "#B765FF",
+      "text": "#F6FCFF"
+    },
+    "motif": "mirror opposing team crests / symmetrical VS arena",
+    "scene": "two squads face each other, both equally prominent"
+  },
+  "game_boss_fight": {
+    "name": "Game boss fight (long-form)",
+    "keywords": [
+      "boss fight",
+      "one squad vs one boss",
+      "boss arena",
+      "giant boss",
+      "boss"
+    ],
+    "emotional_tone": "boss-scale, climactic, high-risk",
+    "palette": {
+      "background": "#0B112C",
+      "surface": "#171229",
+      "accent": "#FFB527",
+      "highlight": "#7F29EA",
+      "text": "#F5FAFF"
+    },
+    "motif": "giant boss silhouette + arena crown + small hero team",
+    "scene": "one squad fights one massive armored boss, never two mirrored teams"
+  },
+  "spanish_gameplay": {
+    "name": "Spanish-language gameplay (long-form)",
+    "keywords": [
+      "en español",
+      "partidas completas",
+      "gameplay en español",
+      "spanish"
+    ],
+    "emotional_tone": "playful, fresh, exploratory",
+    "palette": {
+      "background": "#052626",
+      "surface": "#143B2F",
+      "accent": "#B6F535",
+      "highlight": "#FDE06B",
+      "text": "#F9FCFD"
+    },
+    "motif": "localized emblem + bright playful arena",
+    "scene": "colorful Spanish-localized gameplay arena with waves of enemies; not a single giant boss as the main image"
+  }
+}

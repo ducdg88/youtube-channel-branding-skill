@@ -1,0 +1,20 @@
+{
+  "mode": "FULL",
+  "style": "AUTO",
+  "niche": "Luxury Woodworking",
+  "market": "Global",
+  "language": "en",
+  "brand_name": "",
+  "target_audience": "international viewers interested in giant logs, slab milling and high-end furniture transformation",
+  "keywords_seed": [
+    "giant wood slabs",
+    "luxury woodworking",
+    "live edge tables"
+  ],
+  "required_assets": 6,
+  "require_youtube_upload_ready": true,
+  "font_use": "system licensed fonts; do not bundle fonts",
+  "image_engine": "use the active model/image tool if available; otherwise prompts only",
+  "asset_profile": "REFERENCE_6",
+  "version": "1.3"
+}

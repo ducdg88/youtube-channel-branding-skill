@@ -1,0 +1,66 @@
+{
+  "brand_name": "GRAINVEYRA",
+  "display_name": "GrainVeyra",
+  "descriptor": "LUXURY WOODWORKING",
+  "tagline": "RARE WOOD. REFINED FORMS.",
+  "niche": "Luxury Woodworking",
+  "market": "Global / English",
+  "language": "en",
+  "style": "AUTO",
+  "logo_motif": "concentric log growth rings with a central V monogram, original geometric mark",
+  "palette": {
+    "background": "#0F0C0A",
+    "surface": "#24160F",
+    "wood": "#6C3F25",
+    "accent": "#BD7B3F",
+    "highlight": "#E5B86C",
+    "text": "#F4EBD9"
+  },
+  "typography": {
+    "headline": "high-contrast editorial serif",
+    "supporting": "modern condensed sans-serif",
+    "font_file_bundled": false
+  },
+  "emotional_attributes": [
+    "luxury",
+    "precision",
+    "heritage",
+    "natural wonder",
+    "craftsmanship"
+  ],
+  "content_pillars": [
+    "Giant log milling",
+    "Grain exploration and slab selection",
+    "Drying and preservation",
+    "CNC precision",
+    "Luxury finish and reveal"
+  ],
+  "name_status": "PRELIMINARY CREATIVE DEMO: NOT EXCLUSIVE",
+  "handle_candidate": "@GrainVeyra",
+  "handle_status": "UNVERIFIED, CHECK IN YOUTUBE STUDIO",
+  "trademark_status": "NOT CHECKED",
+  "lock_status": "DEMO_LOCKED",
+  "brand_version": "1.0",
+  "asset_spec_version": "1.3",
+  "user_reference_policy": "format dimensions only, not wildlife colors or subject matter",
+  "name_collision_screening": {
+    "method": "Web exact phrase queries GrainVeyra, SlabVeyra, Lignovara, ArborVeyra; no exact returns shown by search at creation",
+    "limitations": "Public search results are incomplete. Availability, YouTube handles and trademark clearance still require separate checks.",
+    "check_date": "2026-11-06"
+  },
+  "youtube_safe_logo_bbox": {
+    "photo": [
+      577,
+      582,
+      1940,
+      900
+    ],
+    "vector": [
+      577,
+      582,
+      1940,
+      900
+    ]
+  },
+  "asset_profile": "REFERENCE_6"
+}

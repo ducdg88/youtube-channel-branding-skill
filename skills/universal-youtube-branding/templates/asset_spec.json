@@ -1,0 +1,108 @@
+{
+  "version": "1.1",
+  "reference_based": true,
+  "required_assets": [
+    {
+      "id": "01",
+      "filename": "01_banner_cinematic_2048x682.png",
+      "width": 2048,
+      "height": 682,
+      "format": "PNG",
+      "alpha_required": false
+    },
+    {
+      "id": "02",
+      "filename": "02_banner_story_vector_2048x1152.png",
+      "width": 2048,
+      "height": 1152,
+      "format": "PNG",
+      "alpha_required": false
+    },
+    {
+      "id": "03",
+      "filename": "03_logo_horizontal_transparent_2048x682.png",
+      "width": 2048,
+      "height": 682,
+      "format": "PNG",
+      "alpha_required": true
+    },
+    {
+      "id": "04",
+      "filename": "04_avatar_1254x1254.png",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "alpha_required": false
+    },
+    {
+      "id": "05",
+      "filename": "05_wordmark_transparent_2048x682.png",
+      "width": 2048,
+      "height": 682,
+      "format": "PNG",
+      "alpha_required": true
+    }
+  ],
+  "upload_assets": [
+    {
+      "filename": "YOUTUBE_UPLOAD_01_cinematic_2560x1440.jpg",
+      "width": 2560,
+      "height": 1440,
+      "format": "JPEG",
+      "max_bytes": 6291456
+    },
+    {
+      "filename": "YOUTUBE_UPLOAD_02_vector_2560x1440.jpg",
+      "width": 2560,
+      "height": 1440,
+      "format": "JPEG",
+      "max_bytes": 6291456
+    }
+  ],
+  "safe_area_youtube_px": {
+    "canvas": [
+      2560,
+      1440
+    ],
+    "bbox_center": [
+      508,
+      508,
+      2052,
+      932
+    ]
+  },
+  "reference_examples": {
+    "source_1": [
+      2048,
+      682
+    ],
+    "source_2": [
+      1672,
+      941
+    ],
+    "source_3": [
+      2048,
+      682
+    ],
+    "source_4": [
+      1254,
+      1254
+    ],
+    "source_5": [
+      2048,
+      682
+    ],
+    "source_6": [
+      2048,
+      1152
+    ]
+  },
+  "optional_assets": [
+    {
+      "filename": "02_banner_story_exact_reference_1672x941.png",
+      "width": 1672,
+      "height": 941,
+      "format": "PNG"
+    }
+  ]
+}
