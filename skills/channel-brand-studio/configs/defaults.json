@@ -1,0 +1,31 @@
+{
+  "version": "3.0.0",
+  "brand_mode": "user_name_or_ai_suggest_or_reference",
+  "preview_batch": {
+    "default": 10,
+    "min": 1,
+    "max": 20,
+    "kind": "one distinct brand concept preview per option",
+    "require_individual_images": true,
+    "no_auto_select": true
+  },
+  "final_assets": {
+    "profile": "CUSTOM",
+    "require_explicit_output_spec": true,
+    "allow_any_count": true,
+    "supported_profiles": [
+      "CUSTOM",
+      "REFERENCE_MATCH",
+      "YOUTUBE_BASIC",
+      "REFERENCE_6"
+    ]
+  },
+  "reviews": {
+    "user_selection_mandatory": true,
+    "technical_quality_does_not_imply_visual_approval": true
+  },
+  "security": {
+    "white_label": true,
+    "do_not_publish_private_examples": true
+  }
+}

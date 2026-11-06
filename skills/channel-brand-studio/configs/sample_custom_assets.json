@@ -1,0 +1,30 @@
+{
+  "profile": "CUSTOM",
+  "assets": [
+    {
+      "id": "avatar",
+      "filename": "avatar.png",
+      "width": 1024,
+      "height": 1024,
+      "format": "PNG",
+      "transparent": false
+    },
+    {
+      "id": "channel_banner",
+      "filename": "channel_banner.png",
+      "width": 2560,
+      "height": 1440,
+      "format": "PNG",
+      "transparent": false,
+      "youtube_safe_zone": true
+    },
+    {
+      "id": "brand_wordmark",
+      "filename": "brand_wordmark.png",
+      "width": 1800,
+      "height": 600,
+      "format": "PNG",
+      "transparent": true
+    }
+  ]
+}

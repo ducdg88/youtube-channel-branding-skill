@@ -1,0 +1,72 @@
+[
+  {
+    "id": "01",
+    "title": "Cinematic Nature",
+    "palette": "Forest jade / antique gold",
+    "design_direction": "Documentary photography, emblem crest, premium serif",
+    "is_generated_image": false
+  },
+  {
+    "id": "02",
+    "title": "High-Energy Action",
+    "palette": "Ember orange / ink black",
+    "design_direction": "Dynamic symbol, sharp motion, bold condensed type",
+    "is_generated_image": false
+  },
+  {
+    "id": "03",
+    "title": "Modern Minimal",
+    "palette": "Warm ivory / deep charcoal",
+    "design_direction": "Abstract monogram, negative space, clean typography",
+    "is_generated_image": false
+  },
+  {
+    "id": "04",
+    "title": "Golden Luxury",
+    "palette": "Bronze / onyx",
+    "design_direction": "Metallic accents, embossed icon, restrained editorial layout",
+    "is_generated_image": false
+  },
+  {
+    "id": "05",
+    "title": "Scientific Atlas",
+    "palette": "Deep teal / stone",
+    "design_direction": "Precise line art, informative documentary style",
+    "is_generated_image": false
+  },
+  {
+    "id": "06",
+    "title": "Electric Digital",
+    "palette": "Neon blue / ultraviolet",
+    "design_direction": "Futuristic gradient, geometric brandmark",
+    "is_generated_image": false
+  },
+  {
+    "id": "07",
+    "title": "Organic Illustration",
+    "palette": "Sage / coral",
+    "design_direction": "Handcrafted shapes, natural textures, friendly type",
+    "is_generated_image": false
+  },
+  {
+    "id": "08",
+    "title": "Retro Editorial",
+    "palette": "Burnt sienna / cream",
+    "design_direction": "Vintage poster, screen-print texture, editorial serif",
+    "is_generated_image": false
+  },
+  {
+    "id": "09",
+    "title": "Epic Panorama",
+    "palette": "Midnight blue / amber",
+    "design_direction": "Scale and atmosphere, landscape composite, strong insignia",
+    "is_generated_image": false
+  },
+  {
+    "id": "10",
+    "title": "Playful Pop",
+    "palette": "Magenta / lime",
+    "design_direction": "Expressive mascot, saturated palette, rounded display type",
+    "is_generated_image": false
+  }
+]

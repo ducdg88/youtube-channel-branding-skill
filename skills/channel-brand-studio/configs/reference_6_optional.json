@@ -1,0 +1,54 @@
+{
+  "profile": "REFERENCE_6",
+  "info": "OPTIONAL, never inferred as default",
+  "assets": [
+    {
+      "id": "banner_cinematic",
+      "filename": "01_cinematic_banner.png",
+      "width": 2048,
+      "height": 682,
+      "format": "PNG",
+      "transparent": false
+    },
+    {
+      "id": "scene_a",
+      "filename": "02_story_scene_a.png",
+      "width": 1672,
+      "height": 941,
+      "format": "PNG",
+      "transparent": false
+    },
+    {
+      "id": "logo_horizontal",
+      "filename": "03_icon_wordmark.png",
+      "width": 2048,
+      "height": 682,
+      "format": "PNG",
+      "transparent": true
+    },
+    {
+      "id": "avatar",
+      "filename": "04_avatar.png",
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG",
+      "transparent": false
+    },
+    {
+      "id": "wordmark",
+      "filename": "05_typographic_wordmark.png",
+      "width": 2048,
+      "height": 682,
+      "format": "PNG",
+      "transparent": true
+    },
+    {
+      "id": "scene_b",
+      "filename": "06_story_scene_b.png",
+      "width": 2048,
+      "height": 1152,
+      "format": "PNG",
+      "transparent": false
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+# Generate an illustrative mockup gallery from 10 generic concepts.
+import json,html
+from pathlib import Path
+ROOT=Path(__file__).resolve().parent.parent
+concepts=json.loads((ROOT/'examples'/'ten_concept_ideas.json').read_text('utf-8'))
+colors=['#173e35','#b33e29','#2d3240','#9f762c','#126d72','#3623a8','#66764b','#a85532','#14284b','#a62d7e']
+cards=[]
+for i,x in enumerate(concepts):
+    c=colors[i]
+    cards.append(f'''<article class="card"><div class="art" style="--c:{c}"><span class="corner">PREVIEW MOCKUP</span><div class="emblem">◇ {x['id']}</div><strong>EXAMPLE BRAND</strong><small>BRAND CONCEPT</small></div><h3>#{x['id']} {html.escape(x['title'])}</h3><p>{html.escape(x['design_direction'])}</p><label><input type="checkbox"> Chọn phương án {x['id']}</label></article>''')
+page='''<!doctype html><html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Brand Studio - 10 concept gallery mockup</title><style>body{background:#101215;color:#ecedf0;font:16px system-ui;margin:0;padding:24px}header{max-width:1100px;margin:auto auto 24px}h1{margin:0 0 10px}p{color:#b7b9c0;line-height:1.45}section{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:18px}.card{background:#1c2025;border:1px solid #383f47;border-radius:16px;overflow:hidden;padding-bottom:16px}.card h3,.card p,.card label{margin:12px 16px;display:block}.card h3{font-size:16px}.card p{font-size:13px;min-height:45px}.card label{cursor:pointer}.art{height:185px;position:relative;overflow:hidden;display:flex;justify-content:center;align-items:center;flex-direction:column;gap:4px;background:radial-gradient(circle at 72% 24%,#ffffff55,transparent 30%),linear-gradient(125deg,var(--c),#090b0e 87%)}.emblem{font-size:40px;font-weight:900;transform:rotate(-8deg);letter-spacing:-3px;opacity:.9}.art strong{font-weight:900;font-size:21px;letter-spacing:1.5px}.art small{font-size:9px;letter-spacing:3px;opacity:.8}.corner{position:absolute;top:12px;right:12px;font-size:10px;background:#0008;padding:4px 7px;border-radius:5px}footer{max-width:1100px;margin:22px auto;color:#aaa;font-size:12px}</style><header><h1>10 phương án nhận diện: giao diện minh họa</h1><p>Đây là 10 mockup CSS để kiểm tra luồng lựa chọn; KHÔNG phải 10 hình AI đã tạo. Khi triển khai, thay ô mẫu bằng hình render thật từ image provider, rồi người dùng chọn phương án trước khi chọn định dạng ảnh cuối.</p></header><section>'''+''.join(cards)+'''</section><footer>Luồng: nhập brief → 10 ảnh preview thật → khách chọn → tùy chọn đầu ra → tạo tệp riêng → QA → ZIP.</footer></html>'''
+out=ROOT/'examples'/'concept_gallery_demo.html';out.write_text(page,'utf-8');print(out)

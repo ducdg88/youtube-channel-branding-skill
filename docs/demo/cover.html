@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Channel Brand Studio v3.0: ảnh bìa</title>
+<meta name="viewport" content="width=1600">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&family=Bebas+Neue&family=Manrope:wght@500;700;800&family=Cinzel:wght@500;600;700&family=IBM+Plex+Mono:wght@500&family=Space+Grotesk:wght@500;700&family=Orbitron:wght@700;900&family=Fraunces:ital,opsz,wght@0,9..144,800;1,9..144,500&family=Abril+Fatface&family=Oswald:wght@500;600&family=Baloo+2:wght@800&display=block" rel="stylesheet">
+<link href="demo.css" rel="stylesheet">
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div>
+    <div class="kicker"><i></i>Agent Skill cho Claude Code và Antigravity · v3.0</div>
+    <h1>Channel Brand <span>Studio</span></h1>
+    <p class="sub">10 phương án nhận diện kênh YouTube. Bạn chọn, AI mới xuất đúng các ảnh bạn cần.</p>
+  </div>
+  <div class="flow">
+    <div class="step"><b>1</b>Tên hoặc ảnh mẫu</div><span class="arr">›</span>
+    <div class="step"><b>2</b>10 concept</div><span class="arr">›</span>
+    <div class="step hl"><b>3</b>Bạn chọn</div><span class="arr">›</span>
+    <div class="step"><b>4</b>Chốt đầu ra</div><span class="arr">›</span>
+    <div class="step"><b>5</b>Xuất ảnh và QA</div>
+  </div>
+</header>
+<section class="grid" id="grid"></section>
+<footer><span>Ảnh minh hoạ dựng bằng HTML và SVG, không phải ảnh AI. <b>AURIVAN</b> là tên kênh hư cấu.</span><span><b>github.com/ducdg88/youtube-channel-branding-skill</b></span></footer>
+</div>
+<script src="concepts.js"></script>
+<script>
+document.getElementById('grid').innerHTML = CONCEPTS.map(c => `
+<article class="card${c.id==='04'?' sel':''}">${c.id==='04'?'<div class="badge"><svg width="11" height="11" viewBox="0 0 12 12"><path d="M2 6.5 L5 9.2 L10 3" stroke="#1b1408" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Bạn chọn</div>':''}
+<div class="art c${+c.id}">${c.art}<div class="strip">${c.pal.map(p=>`<span style="background:${p}"></span>`).join('')}</div></div>
+<div class="info"><div class="t"><em>#${c.id}</em>${c.title}</div><p class="d">${c.vi}</p></div></article>`).join('');
+</script>
+</body>
+</html>

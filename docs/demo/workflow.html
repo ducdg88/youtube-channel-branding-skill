@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Channel Brand Studio v3.0: quy trình</title>
+<meta name="viewport" content="width=1600">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Cinzel:wght@500;600;700&family=IBM+Plex+Mono:wght@500;600&display=block" rel="stylesheet">
+<link href="demo.css" rel="stylesheet">
+<link href="workflow.css" rel="stylesheet">
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="kicker"><i></i>Channel Brand Studio v3.0 · quy trình</div>
+  <h1>Duyệt trước, <span>xuất sau</span></h1>
+  <p class="sub">AI không tự chọn concept, không mặc định 6 ảnh. Chỉ xuất đúng các file bạn yêu cầu, rồi kiểm từng file.</p>
+</header>
+<div class="cols">
+  <div class="panel">
+    <div class="ph">8 bước, mỗi bước một trạng thái</div>
+    <div class="st"><div class="n">1</div><div><div class="l">Nhập tên, chủ đề hoặc ảnh mẫu</div><div class="s">Giữ đúng chính tả và dấu của tên kênh</div></div><code>INTAKE</code></div>
+    <div class="st"><div class="n">2</div><div><div class="l">Gợi ý tên nếu bạn cần</div><div class="s">Tên và handle ghi rõ là chưa kiểm</div></div><code>NAME_REVIEW</code></div>
+    <div class="st"><div class="n">3</div><div><div class="l">10 concept riêng biệt (1 đến 20)</div><div class="s">Mỗi concept: biểu tượng, chữ, màu, kiểu chữ</div></div><code>PREVIEW_BATCH</code></div>
+    <div class="st gate"><div class="n">4</div><div><div class="l">Bạn chọn, sửa hoặc trộn</div><div class="s">Chưa chọn thì dừng chờ, không tự chạy tiếp</div></div><code>AWAITING_USER_SELECTION</code></div>
+    <div class="st"><div class="n">5</div><div><div class="l">Chốt danh sách file đầu ra</div><div class="s">CUSTOM mặc định, kích thước và định dạng tuỳ ý</div></div><code>OUTPUT_SPEC</code></div>
+    <div class="st"><div class="n">6</div><div><div class="l">Xuất từng file theo bản khoá</div><div class="s">Đọc chung brand.lock.json, không lệch tên, màu</div></div><code>PRODUCE</code></div>
+    <div class="st"><div class="n">7</div><div><div class="l">Kiểm kỹ thuật, bạn duyệt bằng mắt</div><div class="s">technical_pass chưa phải là đã duyệt</div></div><code>QA</code></div>
+    <div class="st"><div class="n">8</div><div><div class="l">Đóng gói ZIP và manifest</div><div class="s">Chỉ COMPLETE khi đủ file và đã duyệt</div></div><code>DELIVER</code></div>
+  </div>
+  <div class="panel">
+    <div class="ph">Ví dụ: chọn <b>#04 Golden Luxury</b>, chỉ cần 3 file</div>
+    <div class="kit">
+      <div class="asset"><div class="banner"><div class="safe"><span>Vùng an toàn trên mọi thiết bị</span></div>
+        <div class="bl"><svg width="40" height="40" viewBox="0 0 62 62"><defs><linearGradient id="gb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4dca6"/><stop offset=".55" stop-color="#b08d57"/><stop offset="1" stop-color="#7d5f33"/></linearGradient></defs><rect x="11" y="11" width="40" height="40" transform="rotate(45 31 31)" fill="none" stroke="url(#gb)" stroke-width="2"/><rect x="17" y="17" width="28" height="28" transform="rotate(45 31 31)" fill="#16120b" stroke="url(#gb)" stroke-width="1"/><text x="31" y="38.5" text-anchor="middle" font-family="Cinzel" font-weight="700" font-size="20" fill="url(#gb)">A</text></svg>
+        <div><div class="wm">AURIVAN</div><div class="tg">CRAFTED STORIES</div></div></div></div>
+        <div class="cap"><b>channel_banner.png</b><span>2560x1440</span><em class="ok">&#10003; đạt</em></div></div>
+      <div class="asset"><div class="avatar"><div class="av"><div><svg width="66" height="66" viewBox="0 0 62 62" style="display:block;margin:auto"><defs><linearGradient id="ga" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4dca6"/><stop offset=".55" stop-color="#b08d57"/><stop offset="1" stop-color="#7d5f33"/></linearGradient></defs><rect x="11" y="11" width="40" height="40" transform="rotate(45 31 31)" fill="none" stroke="url(#ga)" stroke-width="1.8"/><rect x="17" y="17" width="28" height="28" transform="rotate(45 31 31)" fill="#16120b" stroke="url(#ga)" stroke-width=".8"/><text x="31" y="38.5" text-anchor="middle" font-family="Cinzel" font-weight="700" font-size="20" fill="url(#ga)">A</text></svg><small>AURIVAN</small></div></div></div>
+        <div class="cap"><b>avatar.png</b><span>1024x1024</span><em class="ok">&#10003; đạt</em></div></div>
+      <div class="asset"><div class="checker"><div class="wm">AURIVAN</div></div>
+        <div class="cap"><b>brand_wordmark.png</b><span>1800x600</span><span class="vn" style="margin-left:0">nền trong suốt</span><em class="ok">&#10003; đạt</em></div></div>
+      <div class="asset"><div class="code">{ <i>&quot;channel_name&quot;</i>: <u>&quot;AURIVAN&quot;</u>,
+  <i>&quot;selected_concept_ids&quot;</i>: [<u>&quot;04&quot;</u>],
+  <i>&quot;locale&quot;</i>: <u>&quot;vi&quot;</u>,
+  <i>&quot;profile&quot;</i>: <u>&quot;CUSTOM&quot;</u>, <i>&quot;assets&quot;</i>: 3 }</div>
+        <div class="cap"><b>brand.lock.json</b><span class="vn">khoá sau khi bạn chọn</span></div></div>
+    </div>
+    <div class="qa">
+      <div class="chip"><span class="tick">&#10003;</span>Đủ 3/3 file</div>
+      <div class="chip"><span class="tick">&#10003;</span>Đúng kích thước</div>
+      <div class="chip"><span class="tick">&#10003;</span>Alpha thật</div>
+      <div class="chip wait">&#9719; Duyệt bằng mắt: chờ bạn</div>
+    </div>
+  </div>
+</div>
+<footer><span>Ảnh minh hoạ dựng bằng HTML và SVG, không phải ảnh AI. <b>AURIVAN</b> là tên kênh hư cấu.</span><span><b>github.com/ducdg88/youtube-channel-branding-skill</b></span></footer>
+</div>
+</body>
+</html>

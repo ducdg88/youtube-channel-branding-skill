@@ -37,3 +37,14 @@ jobs:
           json.dump(b, open(p, 'w', encoding='utf-8'))
           PY
           python skills/universal-youtube-branding/scripts/build_prompts.py --brand /tmp/new/brand.lock.json --out /tmp/new/prompts.md
+      - name: Channel Brand Studio v3.0 compiles and has frontmatter
+        run: |
+          python -m compileall -q skills/channel-brand-studio/scripts skills/channel-brand-studio/tests
+          head -12 skills/channel-brand-studio/SKILL.md | grep -q '^name: channel-brand-studio'
+          head -12 skills/channel-brand-studio/SKILL.md | grep -q '^description:'
+      - name: Channel Brand Studio v3.0 JSON configs parse
+        run: for f in skills/channel-brand-studio/configs/*.json skills/channel-brand-studio/examples/*.json; do python -m json.tool "$f" > /dev/null; done
+      - name: Channel Brand Studio v3.0 stage gate tests
+        run: python skills/channel-brand-studio/tests/test_studio.py
+      - name: README images exist
+        run: test -s docs/cover.png && test -s docs/demo/workflow.png
