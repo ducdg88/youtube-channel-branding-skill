@@ -1,88 +1,71 @@
-/* Shared styles for the Channel Brand Studio demo images (render at 1600x900). */
-:root{--bg:#0d0e11;--panel:#16181d;--line:#262a31;--ink:#eef0f3;--mute:#9aa1ad;--acc:#e8b85a}
+/* Shared styles for the Channel Brand Studio demo images.
+   Layout is 1600x900 CSS px, exported at 2x (3200x1800). Smallest text is 16 px so it stays
+   readable when GitHub shows the image about 880 px wide. */
+:root{--bg:#0d0e11;--panel:#16181d;--line:#262a31;--ink:#eef0f3;--mute:#a7adb8;--acc:#e8b85a}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{width:1600px;height:900px;overflow:hidden;background:var(--bg)}
-body{font-family:'Be Vietnam Pro',sans-serif;color:var(--ink);position:relative;
+body{font-family:"Be Vietnam Pro",sans-serif;color:var(--ink);position:relative;
   background:radial-gradient(900px 500px at 85% -10%,#2a2212 0%,transparent 60%),radial-gradient(700px 500px at 0% 110%,#13202a 0%,transparent 60%),var(--bg)}
-.wrap{position:absolute;inset:44px 56px 36px}
-header{height:162px;position:relative}
-header .flow{position:absolute;right:0;top:44px}
-.kicker{display:inline-flex;gap:10px;align-items:center;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--acc)}
+.wrap{position:absolute;inset:40px 56px 30px}
+header{height:206px;position:relative}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-size:16px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--acc)}
 .kicker i{width:28px;height:2px;background:var(--acc);display:block}
-h1{white-space:nowrap;font-size:60px;font-weight:800;letter-spacing:-.025em;line-height:1.02;margin-top:14px}
+h1{white-space:nowrap;font-size:64px;font-weight:800;letter-spacing:-.025em;line-height:1.02;margin-top:10px}
 h1 span{color:var(--acc)}
-.sub{font-size:20px;color:#c9ced6;margin-top:14px;font-weight:500}
-.flow{display:flex;gap:6px;align-items:center}
-.step{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:8px 14px 8px 8px;font-size:13.5px;font-weight:600;display:flex;gap:9px;align-items:center;white-space:nowrap}
-.step b{width:24px;height:24px;border-radius:50%;background:#262a31;color:var(--acc);display:grid;place-items:center;font-size:12px}
+.sub{font-size:23px;color:#d3d7de;margin-top:12px;font-weight:500}
+.flow{display:flex;gap:12px;align-items:center;margin-top:18px}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:9px 20px 9px 9px;font-size:17px;font-weight:600;display:flex;gap:11px;align-items:center;white-space:nowrap}
+.step b{width:28px;height:28px;border-radius:50%;background:#262a31;color:var(--acc);display:grid;place-items:center;font-size:15px}
 .step.hl{border-color:var(--acc);background:#241d10}
 .step.hl b{background:var(--acc);color:#1b1408}
-.arr{color:#4b515c;font-size:18px}
-.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;margin-top:26px}
+.arr{color:#5b626e;font-size:22px;line-height:1}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:20px}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden;position:relative}
 .card.sel{border:2px solid var(--acc);box-shadow:0 0 0 6px rgba(232,184,90,.12)}
-.badge{position:absolute;top:10px;right:10px;z-index:5;background:var(--acc);color:#1b1408;font-size:11px;font-weight:700;padding:5px 9px;border-radius:999px;display:flex;gap:5px;align-items:center}
-.art{height:194px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.info{padding:13px 15px 14px}
-.row{display:flex;justify-content:space-between;align-items:center}
-.t{font-size:15px;font-weight:700;display:flex;gap:8px;align-items:center}
-.t em{font-style:normal;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--mute);font-weight:500}
-.d{font-size:12.5px;color:var(--mute);margin-top:6px;line-height:1.45;height:36px}
-.pal{display:flex;gap:4px}
-.pal span{width:14px;height:14px;border-radius:4px;border:1px solid rgba(255,255,255,.12)}
-footer{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;font-size:13px;color:#6f7682}
-footer b{color:#aab1bc;font-weight:600}
+.badge{position:absolute;top:10px;right:10px;z-index:5;background:var(--acc);color:#1b1408;font-size:15px;font-weight:700;padding:5px 11px;border-radius:999px;display:flex;gap:6px;align-items:center}
+.art{height:160px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.info{padding:11px 15px 13px}
+.t{font-size:18px;font-weight:700;display:flex;gap:8px;align-items:baseline;white-space:nowrap}
+.t em{font-style:normal;font-family:"IBM Plex Mono",monospace;font-size:16px;color:var(--mute);font-weight:500}
+.d{font-size:16px;color:var(--mute);margin-top:5px;line-height:1.38;height:44px}
+footer{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;font-size:16px;color:#8b929e}
+footer b{color:#c0c6cf;font-weight:600}
 .stack{display:flex;flex-direction:column;align-items:center;position:relative}
 .lockh{display:flex;align-items:center;gap:12px;position:relative}
 .bgsvg{position:absolute;inset:0;width:100%;height:100%}
-/* 01 Cinematic Nature */
-.c1{background:radial-gradient(160px 120px at 50% 0%,#2f6b58,transparent 70%),linear-gradient(180deg,#173e35,#0c231d)}
-.c1 .wm{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:30px;letter-spacing:.2em;margin-right:-.2em;color:#dcb873;margin-top:6px;line-height:1}
-.c1 .tg{font-size:9px;letter-spacing:.45em;margin-right:-.45em;color:#9dbfae;margin-top:5px}
-/* 02 High-Energy Action */
-.c2{background:repeating-linear-gradient(115deg,#121212 0 22px,#171717 22px 44px)}
-.c2 .wm{font-family:'Bebas Neue',sans-serif;font-size:52px;color:#fff;transform:skewX(-12deg);line-height:.9;letter-spacing:.02em}
-.c2 .bar{height:6px;width:118px;background:#ff5a1f;transform:skewX(-30deg);margin-top:4px}
-.c2 .tg{font-family:'Bebas Neue';font-size:15px;color:#ff7a3f;letter-spacing:.3em;margin-top:6px;transform:skewX(-12deg)}
-/* 03 Modern Minimal */
-.c3{background:#f3eee4;justify-content:flex-start;padding-left:28px}
-.c3 .wm{font-family:'Manrope',sans-serif;font-weight:800;font-size:34px;color:#24262b;letter-spacing:-.04em;line-height:1}
-.c3 .tg{font-family:'Manrope';font-weight:500;font-size:12px;color:#8a857b;letter-spacing:.08em;margin-top:5px}
-.c3 .rule{position:absolute;left:28px;right:28px;bottom:26px;height:1px;background:#d8d1c3}
-.c3 .rule:after{content:'aurivan.studio';position:absolute;right:0;top:6px;font:500 10px 'Manrope';color:#a59f93}
-/* 04 Golden Luxury */
-.c4{background:radial-gradient(150px 110px at 50% 40%,#3a2c18,transparent 75%),#0b0b0c}
-.c4 .wm{font-family:'Cinzel',serif;font-weight:600;font-size:23px;letter-spacing:.32em;margin-right:-.32em;margin-top:10px;line-height:1;background:linear-gradient(180deg,#f4dca6,#b08d57 55%,#7d5f33);-webkit-background-clip:text;background-clip:text;color:transparent}
-.c4 .tg{display:flex;align-items:center;gap:8px;font-family:'Cinzel';font-size:9px;letter-spacing:.4em;color:#b08d57;margin-top:8px}
-.c4 .tg i{width:22px;height:1px;background:#7d5f33;display:block}
-/* 05 Scientific Atlas */
-.c5{background:linear-gradient(#0f4c55,#0c3d45)}
-.c5:before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(216,210,196,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(216,210,196,.07) 1px,transparent 1px);background-size:18px 18px}
-.c5 .wm{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:28px;color:#e6e0d2;letter-spacing:.02em;line-height:1}
-.c5 .tg{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8fc3c4;margin-top:7px;letter-spacing:.04em}
-/* 06 Electric Digital */
-.c6{background:radial-gradient(140px 90px at 30% 40%,rgba(90,140,255,.35),transparent 70%),radial-gradient(160px 110px at 80% 70%,rgba(160,80,255,.35),transparent 70%),#0a0b22}
-.c6 .wm{font-family:'Orbitron',sans-serif;font-weight:900;font-size:22px;letter-spacing:.14em;margin-right:-.14em;margin-top:10px;line-height:1;background:linear-gradient(90deg,#5ad1ff,#9b7bff 60%,#d36bff);-webkit-background-clip:text;background-clip:text;color:transparent}
-.c6 .tg{font-family:'Orbitron';font-weight:700;font-size:8.5px;letter-spacing:.5em;margin-right:-.5em;color:#7f8cff;margin-top:7px}
-/* 07 Organic Illustration */
-.c7{background:#e4ead8}
-.c7 .wm{font-family:'Fraunces',serif;font-weight:800;font-size:36px;color:#2f3e2c;letter-spacing:-.02em;line-height:1}
-.c7 .tg{font-family:'Fraunces';font-style:italic;font-weight:500;font-size:13px;color:#c4573f;margin-top:3px}
-/* 08 Retro Editorial */
-.c8{background:#f1e4c8}
-.c8:after{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(90,58,38,.13) 1px,transparent 1.4px);background-size:6px 6px;pointer-events:none}
-.c8 .wm{font-family:'Abril Fatface',serif;font-size:40px;color:#a8442a;line-height:1}
-.c8 .tg{font-family:'Oswald',sans-serif;font-weight:500;font-size:10px;letter-spacing:.4em;margin-right:-.4em;color:#5a3a26;margin-top:6px}
-/* 09 Epic Panorama */
-.c9{background:linear-gradient(180deg,#0a1430 0%,#1b2c58 58%,#e39a3f 100%)}
-.c9 .wm{font-family:'Oswald',sans-serif;font-weight:600;font-size:26px;letter-spacing:.42em;margin-right:-.42em;color:#f6dcae;margin-top:6px;line-height:1}
-.c9 .tg{font-family:'Oswald';font-weight:500;font-size:9px;letter-spacing:.5em;margin-right:-.5em;color:#f2b056;margin-top:5px}
-/* 10 Playful Pop */
-.c10{background:#e0218a}
-.c10 .wm{font-family:'Baloo 2',cursive;font-weight:800;font-size:40px;color:#c6f432;line-height:1;text-shadow:3px 3px 0 #5b0b3d}
-.c10 .tg{font:800 11px 'Baloo 2';color:#fff;letter-spacing:.12em;margin-top:4px}
-
-/* palette strip at the bottom of each concept art */
 .strip{position:absolute;left:0;right:0;bottom:0;height:7px;display:flex;z-index:3}
 .strip span{flex:1}
+/* 01 Cinematic Nature */
+.c1{background:radial-gradient(160px 120px at 50% 0%,#2f6b58,transparent 70%),linear-gradient(180deg,#173e35,#0c231d)}
+.c1 .wm{font-family:"Cormorant Garamond",serif;font-weight:700;font-size:32px;letter-spacing:.2em;margin-right:-.2em;color:#dcb873;margin-top:8px;line-height:1}
+/* 02 High-Energy Action */
+.c2{background:repeating-linear-gradient(115deg,#121212 0 22px,#171717 22px 44px)}
+.c2 .wm{font-family:"Bebas Neue",sans-serif;font-size:54px;color:#fff;transform:skewX(-12deg);line-height:.9;letter-spacing:.02em}
+.c2 .bar{height:7px;width:124px;background:#ff5a1f;transform:skewX(-30deg);margin-top:6px}
+/* 03 Modern Minimal */
+.c3{background:#f3eee4}
+.c3 .wm{font-family:"Manrope",sans-serif;font-weight:800;font-size:38px;color:#24262b;letter-spacing:-.04em;line-height:1}
+/* 04 Golden Luxury */
+.c4{background:radial-gradient(150px 110px at 50% 40%,#3a2c18,transparent 75%),#0b0b0c}
+.c4 .wm{font-family:"Cinzel",serif;font-weight:600;font-size:25px;letter-spacing:.3em;margin-right:-.3em;margin-top:12px;line-height:1;background:linear-gradient(180deg,#f4dca6,#b08d57 55%,#7d5f33);-webkit-background-clip:text;background-clip:text;color:transparent}
+/* 05 Scientific Atlas */
+.c5{background:linear-gradient(#0f4c55,#0c3d45)}
+.c5:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(216,210,196,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(216,210,196,.07) 1px,transparent 1px);background-size:18px 18px}
+.c5 .wm{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:32px;color:#e6e0d2;letter-spacing:.02em;line-height:1}
+/* 06 Electric Digital */
+.c6{background:radial-gradient(140px 90px at 30% 40%,rgba(90,140,255,.35),transparent 70%),radial-gradient(160px 110px at 80% 70%,rgba(160,80,255,.35),transparent 70%),#0a0b22}
+.c6 .wm{font-family:"Orbitron",sans-serif;font-weight:900;font-size:24px;letter-spacing:.14em;margin-right:-.14em;margin-top:12px;line-height:1;background:linear-gradient(90deg,#5ad1ff,#9b7bff 60%,#d36bff);-webkit-background-clip:text;background-clip:text;color:transparent}
+/* 07 Organic Illustration */
+.c7{background:#e4ead8}
+.c7 .wm{font-family:"Fraunces",serif;font-weight:800;font-size:40px;color:#2f3e2c;letter-spacing:-.02em;line-height:1}
+/* 08 Retro Editorial */
+.c8{background:#f1e4c8}
+.c8:after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(90,58,38,.13) 1px,transparent 1.4px);background-size:6px 6px;pointer-events:none}
 .c8 .stack{z-index:2}
+.c8 .wm{font-family:"Abril Fatface",serif;font-size:46px;color:#a8442a;line-height:1}
+/* 09 Epic Panorama */
+.c9{background:linear-gradient(180deg,#0a1430 0%,#1b2c58 58%,#e39a3f 100%)}
+.c9 .wm{font-family:"Oswald",sans-serif;font-weight:600;font-size:28px;letter-spacing:.4em;margin-right:-.4em;color:#f6dcae;margin-top:8px;line-height:1}
+/* 10 Playful Pop */
+.c10{background:#e0218a}
+.c10 .wm{font-family:"Baloo 2",cursive;font-weight:800;font-size:42px;color:#c6f432;line-height:1;text-shadow:3px 3px 0 #5b0b3d}

@@ -12,17 +12,15 @@
 <body>
 <div class="wrap">
 <header>
-  <div>
-    <div class="kicker"><i></i>Agent Skill cho Claude Code và Antigravity · v3.0</div>
-    <h1>Channel Brand <span>Studio</span></h1>
-    <p class="sub">10 phương án nhận diện kênh YouTube. Bạn chọn, AI mới xuất đúng các ảnh bạn cần.</p>
-  </div>
+  <div class="kicker"><i></i>Agent Skill cho Claude Code và Antigravity · v3.0</div>
+  <h1>Channel Brand <span>Studio</span></h1>
+  <p class="sub">10 phương án nhận diện kênh YouTube. Bạn chọn, AI mới xuất đúng các ảnh bạn cần.</p>
   <div class="flow">
     <div class="step"><b>1</b>Tên hoặc ảnh mẫu</div><span class="arr">›</span>
     <div class="step"><b>2</b>10 concept</div><span class="arr">›</span>
     <div class="step hl"><b>3</b>Bạn chọn</div><span class="arr">›</span>
     <div class="step"><b>4</b>Chốt đầu ra</div><span class="arr">›</span>
-    <div class="step"><b>5</b>Xuất ảnh và QA</div>
+    <div class="step"><b>5</b>Xuất ảnh, kiểm, duyệt</div>
   </div>
 </header>
 <section class="grid" id="grid"></section>
@@ -31,9 +29,9 @@
 <script src="concepts.js"></script>
 <script>
 document.getElementById('grid').innerHTML = CONCEPTS.map(c => `
-<article class="card${c.id==='04'?' sel':''}">${c.id==='04'?'<div class="badge"><svg width="11" height="11" viewBox="0 0 12 12"><path d="M2 6.5 L5 9.2 L10 3" stroke="#1b1408" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Bạn chọn</div>':''}
+<article class="card${c.id==='04'?' sel':''}">${c.id==='04'?'<div class="badge"><svg width="14" height="14" viewBox="0 0 12 12"><path d="M2 6.5 L5 9.2 L10 3" stroke="#1b1408" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Bạn chọn</div>':''}
 <div class="art c${+c.id}">${c.art}<div class="strip">${c.pal.map(p=>`<span style="background:${p}"></span>`).join('')}</div></div>
-<div class="info"><div class="t"><em>#${c.id}</em>${c.title}</div><p class="d">${c.vi}</p></div></article>`).join('');
+<div class="info"><div class="t"><em>${c.id}</em>${c.title}</div><p class="d">${c.vi}</p></div></article>`).join('');
 </script>
 </body>
 </html>

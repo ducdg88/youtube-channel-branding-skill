@@ -1,5 +1,5 @@
 {
-  "version": "3.0.0",
+  "version": "3.0.1",
   "brand_mode": "user_name_or_ai_suggest_or_reference",
   "preview_batch": {
     "default": 10,

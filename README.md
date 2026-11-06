@@ -14,22 +14,23 @@ Agent Skill (file `SKILL.md`) giúp AI làm bộ nhận diện cho kênh YouTube
 - **AI không tự chọn.** Chưa có lựa chọn của bạn thì trạng thái là `AWAITING_USER_SELECTION` và dừng chờ.
 - **Không mặc định 6 ảnh.** Bạn chọn đầu ra: chỉ avatar và banner (2 file), hay thêm wordmark, logo ngang, watermark, kích thước và định dạng tuỳ ý. Bộ 6 ảnh cũ chỉ là profile `REFERENCE_6` tuỳ chọn.
 - **Một file khoá chung** `brand.lock.json` sau khi chọn, nên mọi file sau không lệch tên, màu, chính tả.
+- **Đổi gì cũng phải duyệt lại.** Chọn lại concept, chốt lại spec, kiểm lại ảnh hay sửa một file sau khi duyệt thì lần duyệt cũ mất hiệu lực; `bundle` so lại sha256 từng file trước khi nén.
 - **QA không giả được.** Script kiểm số file, kích thước, định dạng, nền trong suốt thật; `technical_pass` không có nghĩa là đã duyệt mỹ thuật, bạn vẫn phải xem bằng mắt.
 
 ![Quy trình 8 bước và ví dụ chọn concept 04 rồi chỉ xuất 3 file](docs/demo/workflow.png)
 
 ## Quy trình
 
-| Bước | Trạng thái | Đầu ra |
-|---|---|---|
-| 1. Nhập | `INTAKE` | Tên kênh có sẵn, hoặc nhờ AI gợi ý tên, hoặc ảnh mẫu bạn có quyền dùng |
-| 2. Chốt tên nếu cần | `AWAITING_NAME_SELECTION` | Danh sách tên, ghi rõ tên và @handle chưa kiểm độc quyền |
-| 3. Tạo concept | `PREVIEWS_GENERATING` | 10 ảnh concept riêng (1 đến 20), mỗi ảnh một file |
-| 4. Bạn chọn | `AWAITING_USER_SELECTION` | Chọn, sửa, hoặc trộn (ví dụ logo của 02, màu của 07) |
-| 5. Chốt đầu ra | `AWAITING_OUTPUT_SPEC` | Danh sách file, kích thước px, định dạng, nền trong suốt |
-| 6. Xuất file | `PRODUCTION` | Từng file riêng theo `brand.lock.json` |
-| 7. Kiểm | `REVIEW_REQUIRED` | QA máy, chờ bạn duyệt bằng mắt |
-| 8. Giao | `COMPLETE` | ZIP gồm file, manifest, báo cáo QA |
+| Bước | Lệnh `studio.py` | Trạng thái sau lệnh | Việc |
+|---|---|---|---|
+| 1 | `init` | `PREVIEWS_PENDING` (chưa có tên: `AWAITING_NAME_SELECTION`) | Tạo job: tên kênh, chủ đề, số concept |
+| 2 | `set-name` | `PREVIEWS_PENDING` | Chốt tên khi nhờ AI gợi ý; chưa chốt thì không kiểm ảnh, không chọn được |
+| 3 | `check-previews` | `AWAITING_USER_SELECTION` (lỗi: `PREVIEWS_INCOMPLETE`) | Kiểm 10 ảnh concept (1 đến 20), mỗi ảnh một file |
+| 4 | `select` | `AWAITING_OUTPUT_SPEC` | Bạn chọn, sửa hoặc trộn; ghi `brand.lock.json` |
+| 5 | `lock-spec` | `PRODUCTION` | Khoá danh sách file, kích thước px, định dạng, nền trong suốt |
+| 6 | `check-final` | `REVIEW_REQUIRED` (lỗi: `PRODUCTION_INCOMPLETE`) | Kiểm từng file, ghi kích thước và sha256 |
+| 7 | `approve-final --confirmed` | `COMPLETE` | Bạn xem bằng mắt và duyệt |
+| 8 | `bundle` | `COMPLETE` | ZIP gồm file, `brand.lock.json`, spec, báo cáo QA, `manifest.json` |
 
 ## Cài đặt
 
@@ -55,6 +56,7 @@ Chạy trong thư mục `skills/channel-brand-studio`:
 ```bash
 python scripts/studio.py init --dir ./test_job --niche "Example topic" --name "EXAMPLE BRAND" --count 10
 python scripts/studio.py status --dir ./test_job
+# job tạo không có --name thì chốt tên trước: python scripts/studio.py set-name --dir ./test_job --name "Tên Kênh"
 # nối máy tạo ảnh, lưu 10 ảnh thật vào test_job/previews/01.png ... 10.png
 python scripts/studio.py check-previews --dir ./test_job
 python scripts/studio.py select --dir ./test_job --ids 03
@@ -79,10 +81,10 @@ skills/channel-brand-studio/
   docs/CLAUDE_BUILD_PROMPT.md # prompt giao AI dựng web white-label
   docs/USER_GUIDE_PUBLIC.md   # hướng dẫn 5 bước cho người dùng cuối
   configs/                    # defaults, CUSTOM mẫu 3 file, REFERENCE_6 tuỳ chọn
-  scripts/studio.py           # init, check-previews, select, lock-spec, check-final, approve-final, bundle
+  scripts/studio.py           # init, set-name, status, check-previews, select, lock-spec, check-final, approve-final, bundle
   scripts/demo_gallery.py     # dựng trang HTML minh hoạ bảng chọn
   examples/                   # 10 brief concept trung tính, trang minh hoạ có nhãn mockup
-  tests/test_studio.py        # kiểm cổng: chưa chọn thì không khoá, chưa duyệt thì không đóng gói
+  tests/test_studio.py        # kiểm cổng: chưa chốt tên, chưa chọn, chưa duyệt, file đổi sau QA đều bị chặn
 ```
 
 ## Ảnh minh hoạ trong README
@@ -90,7 +92,7 @@ skills/channel-brand-studio/
 Hai ảnh trên dựng bằng HTML và SVG, nguồn ở `docs/demo/` (`cover.html`, `workflow.html`, `concepts.js`, `demo.css`). Tên kênh AURIVAN là tên hư cấu, không phải ảnh do AI tạo. Dựng lại bằng Chrome chạy ẩn:
 
 ```bash
-chrome --headless=new --hide-scrollbars --window-size=1600,900 --virtual-time-budget=15000 --screenshot=docs/cover.png docs/demo/cover.html
+chrome --headless=new --hide-scrollbars --window-size=1600,900 --force-device-scale-factor=2 --virtual-time-budget=15000 --screenshot=docs/cover.png docs/demo/cover.html
 ```
 
 ## Bản cũ v1.3: universal-youtube-branding
